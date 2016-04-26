@@ -3,142 +3,88 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>jquery-counter by sophilabs</title>
+    <title>jquery-counter by aklef</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="stylesheet" href="jquery.counter-analog.css">
-    <link rel="stylesheet" href="jquery.counter-analog2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="jquery.counter.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>jquery-counter</h1>
         <p>jQuery.counter (javascript + css3)</p>
-        <p class="view"><a href="https://github.com/sophilabs/jquery-counter">View the Project on GitHub <small>sophilabs/jquery-counter</small></a></p>
+
+        <p class="view"><a href="https://github.com/aklef/jquery-counter">View the Project on GitHub <small>aklef/jquery-counter</small></a></p>
+
+
         <ul>
-          <li><a href="https://github.com/sophilabs/jquery-counter/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sophilabs/jquery-counter/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sophilabs/jquery-counter">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/aklef/jquery-counter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/aklef/jquery-counter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/aklef/jquery-counter">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h1>jQuery.counter (javascript + css3)</h1>
-<h2>Overview</h2>
-<ul>
-<li>Format: <strong>fully customized using an element attribute or an init option</strong></li>
-<li>Direction: <strong>Up or Down</strong></li>
-<li>Stop: <strong>fully customized using an element attribute or an init option</strong></li>
-<li>Appearance: <strong>fully customized using CSS3</strong></li>
-<li>License: <strong>MIT</strong></li>
-</ul>
+        <h1>
+<a id="jquerycounter-javascript--css3" class="anchor" href="#jquerycounter-javascript--css3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery.counter (javascript + css3)</h1>
 
-    <p>
-        <span class="counter counter-analog" data-direction="down">0:10</span>
-    </p>
-    <p>
-        <span class="counter counter-analog" data-direction="up" data-interval="1" data-format="9999" data-stop="2012">0</span>
-    </p>
-    <p>
-        <span class="counter counter-analog" data-direction="up" data-format="23:59:59.9" data-stop="00:00:10.0" data-interval="100">0:00.0</span>
-    </p>
-    <p>
-        <span class="counter counter-analog" data-direction="up" data-format="1 1 1 1 1 1 1 1" data-stop="0 0 1 0 0 0 0 0" data-interval="100">0</span>
-    </p>
-    <script>
-      $('.counter').counter();
-    </script>
+<p><img src="http://i.imgur.com/ub7D9.png" alt="jQuery Counter"></p>
 
-    <p>A jQuery counter based on <a href="http://code.google.com/p/jquery-countdown">http://code.google.com/p/jquery-countdown</a> with more options.</p>
+<p>A jQuery counter based on <a href="https://github.com/sophilabs/jquery-counter">https://github.com/sophilabs/jquery-counter</a> based on <a href="http://code.google.com/p/jquery-countdown">http://code.google.com/p/jquery-countdown</a> with even more options (and developper support!).</p>
 
-    <h2>Options</h2>
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
 
-    <p>Options can be set by attribute <code>data-&lt;name&gt;="value"</code> or in the options hash on counter initialization: <code>$(element).counter({name: value, ...})</code></p>
+<p>Options can be set by attribute <code>data-&lt;name&gt;="value"</code> or in the options hash on counter initialization: <code>$(element).counter({name: value, ...})</code></p>
 
-    <p><strong><code>direction: up|down</code></strong><br>Counter direction - <em>default: <code>down</code></em></p>
+<p><strong><code>direction: up|down</code></strong> Counter direction</p>
 
-    <p><strong><code>format: string</code></strong><br>Defines the format and the limit for each part - <em>default: <code>23:59:59</code></em></p>
+<p><strong><code>format: string</code></strong> Defines the format and the limit for each part - <em>e.g: 23:59:59</em></p>
 
-    <p><strong><code>interval: number</code></strong><br>Defines the time between each counter increment - <em>default <code>1000</code> milliseconds</em></p>
+<p><strong><code>interval: number</code></strong> Defines the time between each counter increment - <em>by default 1000 milliseconds</em></p>
 
-    <p><strong><code>stop: string</code></strong><br>Sets the counter stop number - <em>default: maximum number allowed by the format.</em></p>
+<p><strong><code>stop: string</code></strong> Defines the counter limit - <em>eg: 10:00 (ten minutes)</em></p>
 
-<pre><code>&lt;span class="counter counter-analog"
- data-direction="up" data-format="23:50" data-interval="1000"
- data-stop="5:00"&gt;0&lt;/span&gt;
-&lt;script&gt;
-    $('.counter').counter();
-&lt;/script&gt;</pre></code>
-<pre><code>&lt;span&gt;&lt;/span&gt;
-&lt;script&gt;
-    $('span')
-      .addClass('counter counter-analog')
-      .counter({
-        initial: "10:00"
-        direction: 'down',
-        format: "23:59",
-        interval: 1000,
-        stop: "5:00"
-      });
-&lt;/script&gt;</pre></code>
+<h2>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h2>
 
-    <h2>Methods</h2>
+<p><strong><code>counterStop</code></strong> Raised when the counter reach limit</p>
 
-    <p><strong><code>play</code></strong><br>Play counter</p>
-    <p><strong><code>reset</code></strong><br>Reset counter</p>
-    <p><strong><code>stop</code></strong><br>Stop counter</p>
-    <pre><code>$('.counter').counter('stop');</code></pre>
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
 
-    <h2>Events</h2>
+<h3>
+<a id="10-seconds-countdown" class="anchor" href="#10-seconds-countdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10 seconds countdown:</h3>
 
-<p><strong><code>counterStop</code></strong><br>Raised when the counter reach limit</p>
-<pre><code>$('.counter').on('counterStop', function() {
-    //code
-});</code></pre>
-
-<h2>Example</h2>
-
-<h3>10 seconds countdown:</h3>
-
-<pre><code>&lt;span class="counter counter-analog"&gt;0:10&lt;/span&gt;
+<pre><code>&lt;span class="counter"&gt;0:10&lt;/span&gt;
 &lt;script&gt;
     $('.counter').counter();
 &lt;/script&gt;
 </code></pre>
 
-<h3>120 seconds count:</h3>
+<h3>
+<a id="120-seconds-count" class="anchor" href="#120-seconds-count" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>120 seconds count:</h3>
 
-<pre><code>&lt;span class="counter counter-analog" data-direction="up" data-format="120"&gt;0&lt;/span&gt;
+<pre><code>&lt;span class="counter" data-direction="up" data-format="120"&gt;0&lt;/span&gt;
 &lt;script&gt;
     $('.counter').counter();
 &lt;/script&gt;
 </code></pre>
 
-<h2>License</h2>
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>MIT License</p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://sophilabs.com">sophilabs</a></p>
+        <p>This project is maintained by <a href="https://github.com/aklef">aklef</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-33865422-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
+    
   </body>
 </html>
